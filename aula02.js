@@ -1,5 +1,8 @@
-let numero = {
-    valor: Math.round(Math.random() * 10)
-}
-const s_json_numero=JSON.stringify(numero)
-console.log(s_json_numero)
+const endpoint="http://localhost:8080/"
+let res=fetch(endpoint)
+.then(res=>res.json())
+.then(dados=>{
+    console.log(dados)
+})
+
+// Conjunto de dados que a API está retornando.
